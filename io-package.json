@@ -1,0 +1,119 @@
+{
+    "common": {
+        "name": "pilightapi",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Pilight",
+        "titleLang": {
+            "en": "Pilight",
+            "de": "Pilight",
+            "ru": "Pilight",
+            "pt": "Pilight",
+            "nl": "Pilight",
+            "fr": "Pilight",
+            "it": "Pilight",
+            "es": "Pilight",
+            "pl": "Pilight",
+            "zh-cn": "Pilight"
+        },
+        "desc": {
+            "en": "Adapter for Pilight",
+            "de": "Adapter für Pilight",
+            "ru": "Адаптер для приложений Pilight",
+            "pt": "Adaptador para aplicativos Pilight",
+            "nl": "Adapter voor Pilight",
+            "fr": "Adaptateur pour applications Pilight",
+            "it": "Adattatore per app Pilight",
+            "es": "Adaptador para aplicaciones Pilight",
+            "pl": "Adapter do aplikacji Pilight",
+            "zh-cn": "Pilight 应用程序适配器"
+        },
+        "authors": [
+            "Lucky <lucky@luckyskills.de>"
+        ],
+        "keywords": [
+            "pilight",
+            "api",
+            "socket"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "pilight.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Lucky-ESA/iobroker.pilightapi/master/admin/pilight.png",
+        "readme": "https://github.com/Lucky-ESA/iobroker.pilightapi/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "household",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "materialize": true,
+        "plugins": {
+            "sentry": {
+                "dsn": "https://6cf518b6f3b444fda2e857dc7131de7c@sentry.iobroker.net/150"
+            }
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.0.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=4.0.9"
+            }
+        ]
+    },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
+    "native": {
+        "pilightip": "",
+        "pilightdaemonport": "",
+        "pilighthttpport": "",
+        "username": "",
+        "password": "",
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
