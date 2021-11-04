@@ -1,6 +1,6 @@
 {
   "name": "iobroker.pilightapi",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Adapter for Pilight",
   "author": {
     "name": "Lucky-ESA",
@@ -9,9 +9,9 @@
   "homepage": "https://github.com/Lucky-ESA/iobroker.pilightapi",
   "license": "MIT",
   "keywords": [
-    "hekr",
-    "wisen",
-    "elro"
+    "pilight",
+    "api",
+    "socket"
   ],
   "repository": {
     "type": "git",
