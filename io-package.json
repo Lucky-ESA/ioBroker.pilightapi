@@ -54,7 +54,7 @@
         "main": "main.js",
         "icon": "pilight.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Lucky-ESA/iobroker.pilightapi/master/admin/pilight.png",
+        "extIcon": "https://raw.githubusercontent.com/Lucky-ESA/iobroker.pilightapi/main/admin/pilight.png",
         "readme": "https://github.com/Lucky-ESA/iobroker.pilightapi/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",
