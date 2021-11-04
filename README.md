@@ -1,0 +1,2 @@
+# iobroker.pilightapi
+Socket API
