@@ -17,12 +17,12 @@
 
         <script type="text/javascript">
             // This will be called by the admin adapter when the settings page loads
-            if (settings.pilightip === undefined) settings.pilightip = "127.0.0.1";
-            if (settings.pilighthttpport === undefined) settings.pilighthttpport = 5001;
-            if (settings.pilightdaemonport === undefined) settings.pilightdaemonport = 5000;
             function load(settings, onChange) {
                 // example: select elements with id=key and class=value and insert value
                 if (!settings) return;
+                if (settings.pilightip === undefined) settings.pilightip = "127.0.0.1";
+                if (settings.pilighthttpport === undefined) settings.pilighthttpport = 5001;
+                if (settings.pilightdaemonport === undefined) settings.pilightdaemonport = 5000;
                 $(".value").each(function () {
                     var $key = $(this);
                     var id = $key.attr("id");
