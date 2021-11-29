@@ -69,12 +69,22 @@ class Pilightapi extends utils.Adapter {
                 }, 2000);
             }, 60 * 1000);
             try {
+                this.log.debug("Data: " + data.toString("utf-8"));
                 const result = data.toString("utf-8").split('\n\n');
                 if (result.length === 1) {
                     this.jsonString += data;
+                    if (this.jsonString.toString("utf-8") === "1") {
+                        this.log.warn("Pilight stopped!!!");
+                        this.jsonString = "";
+                        return;
+                    }
                     this.log.debug("Datafirst: " + this.jsonString.toString("utf-8"));
                 } else {
+                    this.log.debug("Dataall1: " + this.jsonString + " -- " + data);
                     this.jsonString += data;
+                    this.log.debug("Dataall2: " + this.jsonString);
+                    this.jsonString = this.jsonString.replace(/\}{/g, '}\n{');
+                    this.log.debug("Dataall3: " + this.jsonString);
                     this.jsonString.split('\n').forEach( async (v) => {
                         if (v) {
                             this.log.debug("Data: " + v.trim());
@@ -92,7 +102,7 @@ class Pilightapi extends utils.Adapter {
                     this.client.write('HEART\n');
                 }, 10 * 1000);
             } catch (err) {
-                this.log.error(err);
+                this.log.error("connectToNet: " + err);
             }
         });
 
@@ -216,9 +226,7 @@ class Pilightapi extends utils.Adapter {
                   return true;
              }
         } catch (err) {
-            this.log.error(err);
-            this.setState("info.connection", false, true);
-            return false;
+            this.log.error("jsonEvaluate: " + err + "  -  " + JsonStr);
         }
     }
 
