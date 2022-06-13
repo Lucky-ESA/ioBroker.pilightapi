@@ -1,12 +1,12 @@
 {
-  "name": "iobroker.pilightapi",
+  "name": "ioBroker.pilightapi",
   "version": "0.0.1",
   "description": "Adapter for Pilight",
   "author": {
     "name": "Lucky-ESA",
     "email": "lucky@luckyskills.de"
   },
-  "homepage": "https://github.com/Lucky-ESA/iobroker.pilightapi",
+  "homepage": "https://github.com/Lucky-ESA/ioBroker.pilightapi",
   "license": "MIT",
   "keywords": [
     "pilight",
@@ -15,11 +15,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lucky-ESA/iobroker.pilightapi"
+    "url": "https://github.com/Lucky-ESA/ioBroker.pilightapi"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.5.1",
-    "axios": "^0.22.0",
+    "@iobroker/adapter-core": "^2.6.0",
+    "axios": "^0.27.1",
     "dgram": "^1.0.1",
     "json-bigint": "^1.0.0",
     "wss": "^3.3.4"
@@ -64,7 +64,7 @@
     "lint": "eslint"
   },
   "bugs": {
-    "url": "https://github.com/Lucky-ESA/iobroker.pilightapi/issues"
+    "url": "https://github.com/Lucky-ESA/ioBroker.pilightapi/issues"
   },
   "readmeFilename": "README.md"
 }
